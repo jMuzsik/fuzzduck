@@ -1,26 +1,5 @@
-.Home .lander {
-  padding: 80px 0;
-  text-align: center;
-}
-
-.Home .lander h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-
-.Home .lander p {
-  color: #999;
-}
-
-.Home .lander div {
-  padding-top: 20px;
-}
-.Home .lander div a:first-child {
-  margin-right: 20px;
-}
-
 .Home .notes h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   overflow: hidden;
   line-height: 1.5;
@@ -29,4 +8,44 @@
 }
 .Home .notes p {
   color: #666;
+}
+.Home .btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.glyphicon-tree-conifer {
+  color: darkgreen;
+}
+.glyphicon-tree-deciduous {
+  color: green;
+}
+.forest-container,
+.panel-container {
+  display: flex;
+  justify-content: center;
+}
+.forest {
+  background-color: burlywood;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.panel {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+.main-col {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+}
+.button-group,
+.button-group > a {
+  padding: 1rem;
+}
+.lander-container {
+  padding-left: 0;
+  padding-right: 0;
 }

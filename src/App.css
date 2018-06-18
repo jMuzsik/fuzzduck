@@ -1,7 +1,29 @@
+html, #root {
+  background-color: rgba(238, 225, 235, 0.2);
+}
+.btn {
+  background-color: #f3f3f3;
+}
 .App {
   margin-top: 15px;
+  background-color: rgba(238, 225, 235, 0.2);
+}
+
+.App .navbar-header {
+  display: flex;
+  align-items: center;
 }
 
 .App .navbar-brand {
   font-weight: bold;
+  font-size: 1.5rem;
+  width: 75%;
+  height: auto;
+}
+
+@media all and (min-width: 768px) {
+  .App .navbar-brand {
+    font-size: 2rem;
+    width: auto;
+  }
 }

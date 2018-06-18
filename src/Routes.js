@@ -4,6 +4,7 @@ import Home from './containers/Home';
 import Notes from './containers/Notes';
 import Login from './containers/Login';
 import Signup from './containers/Signup';
+import AboutMe from './components/AboutMe';
 import Settings from './containers/Settings';
 import NewNote from './containers/NewNote';
 import NotFound from './containers/NotFound';
@@ -24,6 +25,12 @@ export default ({ childProps }) => (
       path="/signup"
       exact
       component={Signup}
+      props={childProps}
+    />
+    <UnauthenticatedRoute
+      path="/mr-muzsik"
+      exact
+      component={AboutMe}
       props={childProps}
     />
     <AuthenticatedRoute

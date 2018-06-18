@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { CardElement, injectStripe } from "react-stripe-elements";
-import LoaderButton from "./LoaderButton";
-import "./BillingForm.css";
+import React, { Component } from "react"
+import { FormGroup, FormControl, ControlLabel, Alert } from "react-bootstrap"
+import { CardElement, injectStripe } from "react-stripe-elements"
+import LoaderButton from "./LoaderButton"
+import "./BillingForm.css"
 
 class BillingForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       name: "",
       storage: "",
       isProcessing: false,
       isCardComplete: false
-    };
+    }
   }
 
   validateForm() {
@@ -21,37 +21,37 @@ class BillingForm extends Component {
       this.state.name !== "" &&
       this.state.storage !== "" &&
       this.state.isCardComplete
-    );
+    )
   }
 
   handleFieldChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    })
   }
 
   handleCardFieldChange = event => {
     this.setState({
       isCardComplete: event.complete
-    });
+    })
   }
 
   handleSubmitClick = async event => {
-    event.preventDefault();
+    event.preventDefault()
 
-    const { name } = this.state;
+    const { name } = this.state
 
-    this.setState({ isProcessing: true });
+    this.setState({ isProcessing: true })
 
-    const { token, error } = await this.props.stripe.createToken({ name });
+    const { token, error } = await this.props.stripe.createToken({ name })
 
-    this.setState({ isProcessing: false });
+    this.setState({ isProcessing: false })
 
-    this.props.onSubmit(this.state.storage, { token, error });
+    this.props.onSubmit(this.state.storage, { token, error })
   }
 
   render() {
-    const loading = this.state.isProcessing || this.props.loading;
+    const loading = this.state.isProcessing || this.props.loading
 
     return (
       <form className="BillingForm" onSubmit={this.handleSubmitClick}>
@@ -83,6 +83,14 @@ class BillingForm extends Component {
             base: { fontSize: "18px", fontFamily: '"Open Sans", sans-serif' }
           }}
         />
+        <Alert bsStyle="info">
+          <strong>Why is there Billing??</strong> Not sure why. I had fun
+          setting it up, and perhaps i'm going to want to start selling stuff.{" "}
+          <br />
+          <i>
+            The secret to affluency is passive income at the end of the day, no?
+          </i>
+        </Alert>
         <LoaderButton
           block
           bsSize="large"
@@ -93,8 +101,8 @@ class BillingForm extends Component {
           disabled={!this.validateForm()}
         />
       </form>
-    );
+    )
   }
 }
 
-export default injectStripe(BillingForm);
+export default injectStripe(BillingForm)

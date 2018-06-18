@@ -1,41 +1,41 @@
-import React, { Component } from "react";
-import { Auth } from "aws-amplify";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import LoaderButton from "../components/LoaderButton";
-import "./Login.css";
+import React, { Component } from "react"
+import { Auth } from "aws-amplify"
+import { FormGroup, FormControl, ControlLabel, Alert } from "react-bootstrap"
+import LoaderButton from "../components/LoaderButton"
+import "./Login.css"
 
 export default class Login extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isLoading: false,
       email: "",
       password: ""
-    };
+    }
   }
 
   validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    return this.state.email.length > 0 && this.state.password.length > 0
   }
 
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    })
   }
 
   handleSubmit = async event => {
-    event.preventDefault();
+    event.preventDefault()
 
-    this.setState({ isLoading: true });
+    this.setState({ isLoading: true })
 
     try {
-      await Auth.signIn(this.state.email, this.state.password);
-      this.props.userHasAuthenticated(true);
+      await Auth.signIn(this.state.email, this.state.password)
+      this.props.userHasAuthenticated(true)
     } catch (e) {
-      alert(e.message);
-      this.setState({ isLoading: false });
+      alert(e.message)
+      this.setState({ isLoading: false })
     }
   }
 
@@ -60,6 +60,12 @@ export default class Login extends Component {
               type="password"
             />
           </FormGroup>
+          <Alert bsStyle="info">
+            <strong>Why is there a login??</strong> I have no idea yet but if
+            you login you can post thing's to my database. And use my
+            unfininished billing UI cause maybe I wanna sell stuff one day.<br />
+            <i>It's important, ya know, getting architecture in place.</i>
+          </Alert>
           <LoaderButton
             block
             bsSize="large"
@@ -71,6 +77,6 @@ export default class Login extends Component {
           />
         </form>
       </div>
-    );
+    )
   }
 }
