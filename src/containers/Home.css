@@ -14,14 +14,37 @@
   display: flex;
   justify-content: center;
 }
+.universe {
+  margin: 3rem 0;
+}
 .glyphicon-tree-conifer {
   color: darkgreen;
 }
 .glyphicon-tree-deciduous {
   color: green;
 }
+.glyphicon-home {
+  color: brown;
+}
+.glyphicon-tent {
+  color: rgb(145, 72, 72);
+}
+.glyphicon-cloud {
+  color: white;
+}
+.glyphicon-star {
+  color: yellow;
+}
+.glyphicon-globe {
+  color: aqua;
+}
 .forest-container,
-.panel-container {
+.panel-container,
+.water-container,
+.fire-container,
+.cloud-container,
+.star-container,
+.header-container {
   display: flex;
   justify-content: center;
 }
@@ -29,7 +52,29 @@
   background-color: lightgreen;
   padding: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+}
+.star {
+  background-color: black;
+  text-align: center;
+  padding: 2rem;
+}
+.water {
+  background-color: aqua;
+  height: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+.fire {
+  background-color: black;
+  text-align: center;
+}
+.cloud {
+  background-color: skyblue;
+  text-align: center;
+  padding: 2rem;
+}
+.glyphicon-fire {
+  color: red;
 }
 .panel {
   padding-left: 0;
@@ -48,4 +93,7 @@
 .lander-container {
   padding-left: 0;
   padding-right: 0;
+}
+.header {
+  text-align: center;
 }
