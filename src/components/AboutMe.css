@@ -18,3 +18,21 @@
 .button-group {
   margin-bottom: 2rem;
 }
+
+.pad-that-list {
+  padding-left: 1rem;
+}
+.row-container {
+  display: flex;
+  justify-content: center;
+}
+.thumbnail {
+  background-color: black;
+}
+
+.thumbnail * {
+  color: white;
+}
+.thumbnail i {
+  font-size: 5rem;
+}

@@ -496,7 +496,12 @@ export default class Home extends Component {
           <Col xs={12} className="main-col">
             <PageHeader align="center">
               Fuzzy Duck, Mr. Muzsik <br />
-              <small>The process of ducking that fuzz out your mind.</small>
+              <div className="small-text-is-too-damn-wide">
+                <small>
+                  The man that will duck that fuzz out your mind. <br />(And no,
+                  no one calls me this or says this about me, maybe one day)
+                </small>
+              </div>
             </PageHeader>
             <ButtonGroup className="button-group">
               <LinkContainer to="/mr-muzsik">

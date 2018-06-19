@@ -21,8 +21,12 @@ html, #root {
   height: auto;
 }
 
+.random-word {
+  cursor: pointer;
+}
 @media all and (min-width: 768px) {
   .App .navbar-brand {
+    font-weight: bold;
     font-size: 2rem;
     width: auto;
   }

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import { Auth } from "aws-amplify"
-import { Link, withRouter } from "react-router-dom"
-import { Nav, Navbar, NavItem } from "react-bootstrap"
+import { withRouter } from "react-router-dom"
+import { Nav, Navbar, NavItem, Glyphicon } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
 import Routes from "./Routes"
 import "./App.css"
@@ -12,9 +12,7 @@ const NUMBER_OF_QUOTES = 793
 class App extends Component {
   constructor(props) {
     super(props)
-    const randomIndex = this.getRandomArbitrary(0, NUMBER_OF_QUOTES)
-    const randomQuote = quotes[randomIndex]
-    const quote = this.convertQuoteToProperString(randomQuote)
+    const quote = this.getTheRandomWords()
     this.state = {
       isAuthenticated: false,
       isAuthenticating: true,
@@ -35,16 +33,24 @@ class App extends Component {
 
     this.setState({ isAuthenticating: false })
   }
-
+  getTheRandomWords() {
+    const randomIndex = this.getRandomArbitrary(0, NUMBER_OF_QUOTES)
+    const randomQuote = quotes[randomIndex]
+    return this.convertQuoteToProperString(randomQuote)
+  }
+  setRandomWordState() {
+    const quote = this.getTheRandomWords()
+    this.setState({ quote })
+  }
   getRandomArbitrary(min, max) {
     return parseInt(Math.random() * (max - min) + min, 10)
   }
 
   convertQuoteToProperString(quote) {
-    const wordOne = "F" + quote.FIELD1.slice(1)
-    const wordTwo = "D" + quote.FIELD2.slice(1) + ","
-    const wordThree = "Mr." + " " + "M" + quote.FIELD3.slice(1)
-    return wordOne + " " + wordTwo + " " + wordThree
+    const wordOne = `F${quote.FIELD1.slice(1)}`
+    const wordTwo = `D${quote.FIELD2.slice(1)},`
+    const wordThree = `Mr. M${quote.FIELD3.slice(1)}`
+    return `${wordOne} ${wordTwo} ${wordThree}`
   }
 
   userHasAuthenticated = authenticated => {
@@ -71,7 +77,13 @@ class App extends Component {
           <Navbar fluid collapseOnSelect>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/">{this.state.quote}</Link>
+                <a
+                  className="random-word"
+                  onClick={this.setRandomWordState.bind(this)}
+                >
+                  <Glyphicon glyph="glyphicon glyphicon-heart" />{" "}
+                  {this.state.quote}
+                </a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>

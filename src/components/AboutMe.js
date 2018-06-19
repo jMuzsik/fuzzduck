@@ -25,8 +25,8 @@ export default class AboutMe extends Component {
   render() {
     return (
       <Grid>
-        <Row>
-          <Col xs={12} md={6} align="center">
+        <Row className="row-container">
+          <Col xs={12} md={10} align="center">
             <h2>
               I'm <u>Jerry Jeff Muzsik</u>, a creator of software.
             </h2>
@@ -36,31 +36,59 @@ export default class AboutMe extends Component {
             >
               <h3>Gotta spend some time in space</h3>
               <p>It's incredibly important</p>
+              <i className="icon-space-shuttle" />
             </Thumbnail>
           </Col>
-          <Col xs={12} md={6}>
+        </Row>
+        <Row className="row-container">
+          <Col xs={12} md={10}>
             <Jumbotron>
               <p>
                 But seriously, I am an avid develeloper. I spend countless hours
                 every day either coding or learning more about the art of it. My
-                dream is to one day have my own company, ideally filling some
-                void altruistic void in humanities technology sector. Every day
-                I work towards this goal by improving my understanding of
-                software engineering architecture by working with AWS and doing
-                certification exams, by constantly creating new applications
-                utilising the newest technologies and concepts to improve my
-                ability to design a product with the look and feel that will
-                keep people using it, and lastlyk to improve my fundamental
-                ability to constantly move forward with whatever I am creating
-                by aiming to fill in any gaps in my knowledge.
+                dream is to one day have my own company that fills an altruistic
+                void within the humanities technology sector. Every day I work
+                towards this goal in a variety of ways such as:
+              </p>
+              <br />
+              <p className="pad-that-list">
+                • Improving my understanding of software engineering
+                architecture by working with AWS and doing certification exams
+              </p>
+
+              <p className="pad-that-list">
+                • Constantly creating new applications utilising the newest
+                technologies and concepts to improve my ability to design a
+                product with the look and feel that will keep people using it
+              </p>
+
+              <p className="pad-that-list">
+                • Improve my fundamental ability to constantly move forward with
+                whatever I am creating by aiming to fill in any gaps in my
+                knowledge
+              </p>
+              <p className="pad-that-list">
+                • if there is a gap, mastering the ability to quickly find a
+                solution.
+              </p>
+              <br />
+              <p>
+                And that's me selling myself or something. But really, I'm just
+                trying to live life and love every moment of it. We are little
+                thing's in this vast everything, it's important to focus on
+                connecting this little thing we are to the everything so that
+                one day we can look at it all and think that we are as big as
+                all of it.
               </p>
             </Jumbotron>
           </Col>
-          <Col xs={12} md={6}>
+        </Row>
+        <Row className="row-container">
+          <Col xs={12} md={8}>
             <Table striped bordered condensed hover>
               <thead>
                 <tr>
-                  <th colspan="4" className="table-header">
+                  <th colSpan="4" className="table-header">
                     What I <Glyphicon glyph="glyphicon glyphicon-heart" />{" "}
                     working with:
                   </th>
@@ -68,7 +96,7 @@ export default class AboutMe extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td colspan="4">Serverless Technologies (AWS's repetoire)</td>
+                  <td colSpan="4">Serverless Technologies (AWS's repetoire)</td>
                 </tr>
                 <tr>
                   <td>Javascript</td>
@@ -77,23 +105,25 @@ export default class AboutMe extends Component {
                   <td>Redux</td>
                 </tr>
                 <tr>
-                  <td colspan="2">Any UI Framework</td>
-                  <td colspan="2">Great folks</td>
+                  <td colSpan="2">Any UI Framework with some CSS</td>
+                  <td colSpan="2">Or custom CSS, but I won't understand</td>
                 </tr>
                 <tr>
                   <td>Angular</td>
-                  <td colspan="2">Places with dogs</td>
+                  <td colSpan="2">Places with dogs</td>
                   <td>Jest</td>
                 </tr>
                 <tr>
-                  <td colspan="4">
+                  <td colSpan="4">
                     Basically, I can learn anything needed to get the job done.
                   </td>
                 </tr>
               </tbody>
             </Table>
           </Col>
-          <Col xs={12} md={6} className="button-group">
+        </Row>
+        <Row className="row-container">
+          <Col xs={12} md={8} className="button-group">
             <ButtonGroup justified>
               <Button
                 href="https://github.com/jMuzsik"

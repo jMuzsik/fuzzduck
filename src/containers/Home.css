@@ -97,3 +97,8 @@
 .header {
   text-align: center;
 }
+@media all and (min-width: 768px) {
+  .small-text-is-too-damn-wide {
+    width: 75%;
+  }
+}
