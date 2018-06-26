@@ -4,11 +4,14 @@ import {
   FormGroup,
   FormControl,
   ControlLabel,
-  Alert
+  Alert,
+  Button,
+  ButtonGroup
 } from "react-bootstrap"
 import { Auth } from "aws-amplify"
 import LoaderButton from "../components/LoaderButton"
 import "./Signup.css"
+import { LinkContainer } from "react-router-bootstrap"
 
 export default class Signup extends Component {
   constructor(props) {
@@ -149,6 +152,13 @@ export default class Signup extends Component {
           text="Signup"
           loadingText="Signing up…"
         />
+        <ButtonGroup justified className="link-button">
+          <LinkContainer to="/">
+            <Button bsStyle="link" title="returns to home page">
+              Go Back
+            </Button>
+          </LinkContainer>{" "}
+        </ButtonGroup>
       </form>
     )
   }

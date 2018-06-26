@@ -3839,12 +3839,12 @@ export const quotes = [
     FIELD3: "Manifestation"
   },
   {
-    FIELD1: null,
+    FIELD1: "null",
     FIELD2: "Pointer",
     FIELD3: "Micromanagement"
   },
   {
-    FIELD1: null,
+    FIELD1: "null",
     FIELD2: "Pointer",
     FIELD3: "Missing"
   },

@@ -84,7 +84,7 @@ export default class Home extends Component {
           <Col xs={12} sm={6} className="header">
             <Alert bsStyle="success">
               <strong>
-                Thing's are green round here, no fire getting into this home!
+                Thing's are green round here.
               </strong>
             </Alert>
           </Col>

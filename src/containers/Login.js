@@ -1,7 +1,15 @@
 import React, { Component } from "react"
 import { Auth } from "aws-amplify"
-import { FormGroup, FormControl, ControlLabel, Alert } from "react-bootstrap"
+import {
+  FormGroup,
+  FormControl,
+  ControlLabel,
+  Alert,
+  Button,
+  ButtonGroup
+} from "react-bootstrap"
 import LoaderButton from "../components/LoaderButton"
+import { LinkContainer } from "react-router-bootstrap"
 import "./Login.css"
 
 export default class Login extends Component {
@@ -75,6 +83,11 @@ export default class Login extends Component {
             text="Login"
             loadingText="Logging in…"
           />
+        <ButtonGroup justified className="link-button">
+          <LinkContainer to="/">
+            <Button block bsSize="large" bsStyle="link" title="returns to home page">Go Back</Button>
+          </LinkContainer>{" "}
+        </ButtonGroup>
         </form>
       </div>
     )

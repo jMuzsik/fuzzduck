@@ -36,3 +36,12 @@
 .thumbnail i {
   font-size: 5rem;
 }
+.icon-space-shuttle:hover {
+  color: rgb(241, 233, 233);
+}
+td {
+  text-align: center;
+}
+.link-button {
+  margin-top: 2rem;
+}

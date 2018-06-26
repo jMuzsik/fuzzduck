@@ -36,7 +36,12 @@ export default class AboutMe extends Component {
             >
               <h3>Gotta spend some time in space</h3>
               <p>It's incredibly important</p>
-              <i className="icon-space-shuttle" />
+              <a
+                title="links to hubble's images"
+                href="http://hubblesite.org/images/gallery"
+              >
+                <i className="icon-space-shuttle" />
+              </a>
             </Thumbnail>
           </Col>
         </Row>
@@ -52,20 +57,20 @@ export default class AboutMe extends Component {
               </p>
               <br />
               <p className="pad-that-list">
-                • Improving my understanding of software engineering
-                architecture by working with AWS and doing certification exams
+                • improving my understanding of software engineering
+                architecture by working with AWS,
               </p>
 
               <p className="pad-that-list">
-                • Constantly creating new applications utilising the newest
+                • constantly creating new applications utilising the newest
                 technologies and concepts to improve my ability to design a
-                product with the look and feel that will keep people using it
+                product with the look and feel that will keep people using it,
               </p>
 
               <p className="pad-that-list">
-                • Improve my fundamental ability to constantly move forward with
-                whatever I am creating by aiming to fill in any gaps in my
-                knowledge
+                • working on my fundamental ability to constantly move forward
+                with whatever I am creating by aiming to fill in any gaps in my
+                knowledge, and
               </p>
               <p className="pad-that-list">
                 • if there is a gap, mastering the ability to quickly find a
@@ -78,14 +83,14 @@ export default class AboutMe extends Component {
                 thing's in this vast everything, it's important to focus on
                 connecting this little thing we are to the everything so that
                 one day we can look at it all and think that we are as big as
-                all of it.
+                it.
               </p>
             </Jumbotron>
           </Col>
         </Row>
         <Row className="row-container">
           <Col xs={12} md={8}>
-            <Table striped bordered condensed hover>
+            <Table striped bordered condensed responsive>
               <thead>
                 <tr>
                   <th colSpan="4" className="table-header">
@@ -106,16 +111,20 @@ export default class AboutMe extends Component {
                 </tr>
                 <tr>
                   <td colSpan="2">Any UI Framework with some CSS</td>
-                  <td colSpan="2">Or custom CSS, but I won't understand</td>
+                  <td colSpan="2">Or custom CSS, but why?</td>
                 </tr>
                 <tr>
                   <td>Angular</td>
-                  <td colSpan="2">Places with dogs</td>
+                  <td colSpan="2">Cool People</td>
                   <td>Jest</td>
                 </tr>
                 <tr>
+                  <td colSpan="2">Happy People</td>
+                  <td colSpan="2">Funny People</td>
+                </tr>
+                <tr>
                   <td colSpan="4">
-                    Basically, I can learn anything needed to get the job done.
+                    Basically, I can learn anything needed to get the job done
                   </td>
                 </tr>
               </tbody>
@@ -144,9 +153,9 @@ export default class AboutMe extends Component {
                 <i className="icon-linkedin" />
               </Button>
             </ButtonGroup>
-            <ButtonGroup justified>
+            <ButtonGroup justified className="link-button">
               <LinkContainer to="/">
-                <Button title="returns to home page">Go Back</Button>
+                <Button bsStyle="link"title="returns to home page">Go Back</Button>
               </LinkContainer>{" "}
             </ButtonGroup>
           </Col>
