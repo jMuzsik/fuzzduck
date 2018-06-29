@@ -111,7 +111,7 @@ export default class AboutMe extends Component {
                 </tr>
                 <tr>
                   <td colSpan="2">Any UI Framework with some CSS</td>
-                  <td colSpan="2">Or custom CSS, but why?</td>
+                  <td colSpan="2">Or custom CSS</td>
                 </tr>
                 <tr>
                   <td>Angular</td>
