@@ -97,7 +97,21 @@
 .header {
   text-align: center;
 }
+.universe-panel-body {
+  background-color: rgb(180, 221, 180);
+}
+.face-panel-body {
+  background-color: rgb(243, 243, 209);
+}
+.face {
+  font-size: 1rem;
+  background-color: rgb(243, 243, 209);
+}
 @media all and (min-width: 768px) {
+  .face {
+    width: 70%;
+    margin: auto;
+  }
   .small-text-is-too-damn-wide {
     width: 75%;
   }

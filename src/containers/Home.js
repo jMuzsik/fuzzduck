@@ -16,6 +16,46 @@ import {
 import { LinkContainer } from "react-router-bootstrap"
 import "./Home.css"
 
+const face = `
+                  ,,////////////,,,,,,,,,,,
+                ////////////////////////////,,
+             ///////////////////////////////////,,
+         ,"////////////////////////////////////////,,
+       ,"/////////////////////"""""""\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\,
+     "/////////,/////""                 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\,
+     /////////,"                           """\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\,
+     //////,"                                  '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+     /////,"    ___--------------____           \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+     ////                                        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+     ///     ____-------------------___           \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+     /                                             \\\\\\\\\\\\\\\\\\\\\\\\\\
+    /    ,,,,////                ,,,,,,,           \\\\\\\\\\\\\\\\\\\\\\\\
+   |  ///////"""              \\\\\\\\\\\\\\\\\\\\\\\\\\\\,       \\\\\\\\\\\\\\\\\\\\
+   )//"                                 "\\\\\\\\\\,     \\\\\\\\\\\\\\\\\\  ....
+  (               ͡\\                       \\\\\\\\     \\\\\\\\\\\\\\\\" /---  ",
+   \\   ,''''-_      \\            ,''''-_      \\\\     \\\\\\\\\\\\" /   \\   "
+    ) (  *   )  >    )        < (  *   )  >          \\\\\\\\\\" /     \\  "
+   /   ',,,,'_-     /            ',,,,'-'            \\\\\\\\" / \\     / "
+  /                /                                  \\\\\\  \\  \\   / "
+ /                /                                   ///   )  ) / "
+'                /                                   ///   /  / / "
+"               /                                    ///  /___/ ,"
+"              /             \\                       ////,   ,"
+              (               )                     ////  """
+               '. ͜ ."  ͡' . ͜ "                      ///
+  "       ,,////////   \\\\\\\\\\\\\\\\\\\\\\\\,,               ///
+   "  /////////////     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\,            ///
+    "////""  __""""",,,,""""",,,, ""\\\\\\\\\\\\         ////
+     "    ,"____---_____----_____"",              ///
+       "   ",                  ,,""             ///
+        "    """""=======""""""               ///
+         "          ////                    ///
+           "                             ////
+            ",\\\\\\,,,,,,,,,,,,,,,,,/////////"
+              ""///////////////////////""
+                  """"""""""""""""""
+`
+
 export default class Home extends Component {
   constructor(props) {
     super(props)
@@ -57,9 +97,9 @@ export default class Home extends Component {
   renderPanel() {
     return (
       <Col className="panel" xs={12} sm={6}>
-        <Panel bsStyle="info" id="collapsible-panel-example-2" defaultExpanded>
+        <Panel bsStyle="info" id="collapsible-panel-example-2">
           <Panel.Heading>
-            <Panel.Title toggle>Why is there a login, etc.</Panel.Title>
+            <Panel.Title align="center"toggle>Why is there a login, etc.</Panel.Title>
           </Panel.Heading>
           <Panel.Collapse>
             <Panel.Body>
@@ -76,390 +116,406 @@ export default class Home extends Component {
       </Col>
     )
   }
+  renderFace() {
+    return (
+      <Col className="panel" xs={12} sm={8}>
+        <Panel bsStyle="primary" id="collapsible-panel-example-3">
+          <Panel.Heading>
+            <Panel.Title align="center" toggle>This here is me</Panel.Title>
+          </Panel.Heading>
+          <Panel.Collapse>
+            <Panel.Body className="face-panel-body"><pre className="face">{face}</pre>
+            </Panel.Body>
+          </Panel.Collapse>
+        </Panel>
+      </Col>
+    )
+  }
   renderForest() {
     return (
-      <div className="universe">
-        <Row className="header-container">
-          {" "}
-          <Col xs={12} sm={6} className="header">
-            <Alert bsStyle="success">
-              <strong>
-                Thing's are green round here.
-              </strong>
-            </Alert>
-          </Col>
-        </Row>
-        <Row className="star-container">
-          <Col xs={12} sm={6} className="star">
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-globe" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-globe" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-globe" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-            <Glyphicon glyph="glyphicon glyphicon-globe" />
-            <Glyphicon glyph="glyphicon glyphicon-star" />
-          </Col>
-        </Row>
-        <Row className="cloud-container">
-          <Col xs={12} sm={6} className="cloud">
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-            <Glyphicon glyph="glyphicon glyphicon-cloud" />
-          </Col>
-        </Row>
-        <Row className="forest-container">
-          <Col xs={12} sm={6} className="forest">
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-home" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tent" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-            <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
-          </Col>
-        </Row>
-        <Row className="water-container">
-          <Col xs={12} sm={6} className="water" />
-        </Row>
-        <Row className="fire-container">
-          <Col xs={12} sm={6} className="fire">
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-            <Glyphicon glyph="glyphicon glyphicon-fire" />
-          </Col>
-        </Row>
-      </div>
+      <Col className="panel" xs={12} sm={8}>
+        <Panel bsStyle="success" id="collapsible-panel-example-3">
+          <Panel.Heading>
+            <Panel.Title align="center" toggle>Thing's are green round here.</Panel.Title>
+          </Panel.Heading>
+          <Panel.Collapse>
+            <Panel.Body className="universe-panel-body">
+              <div className="universe">
+                <Row className="star-container">
+                  <Col xs={12} sm={6} className="star">
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-globe" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-globe" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-globe" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                    <Glyphicon glyph="glyphicon glyphicon-globe" />
+                    <Glyphicon glyph="glyphicon glyphicon-star" />
+                  </Col>
+                </Row>
+                <Row className="cloud-container">
+                  <Col xs={12} sm={6} className="cloud">
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                    <Glyphicon glyph="glyphicon glyphicon-cloud" />
+                  </Col>
+                </Row>
+                <Row className="forest-container">
+                  <Col xs={12} sm={6} className="forest">
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />{" "}
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-home" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-deciduous" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tent" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                    <Glyphicon glyph="glyphicon glyphicon-tree-conifer" />
+                  </Col>
+                </Row>
+                <Row className="water-container">
+                  <Col xs={12} sm={6} className="water" />
+                </Row>
+                <Row className="fire-container">
+                  <Col xs={12} sm={6} className="fire">
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                    <Glyphicon glyph="glyphicon glyphicon-fire" />
+                  </Col>
+                </Row>
+              </div>
+            </Panel.Body>
+          </Panel.Collapse>
+        </Panel>
+      </Col>
     )
   }
 
@@ -510,7 +566,10 @@ export default class Home extends Component {
             </ButtonGroup>
           </Col>
         </Row>
-        {this.renderForest()}
+        <Row className="panel-container">{this.renderFace()}</Row>
+        <br />
+        <Row className="panel-container">{this.renderForest()}</Row>
+        <br />
         <Row className="panel-container">{this.renderPanel()}</Row>
         <ButtonGroup className="button-group">
           <Button
