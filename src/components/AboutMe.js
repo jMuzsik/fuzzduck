@@ -110,8 +110,8 @@ export default class AboutMe extends Component {
                   <td>Redux</td>
                 </tr>
                 <tr>
-                  <td colSpan="2">Any UI Framework with some CSS</td>
-                  <td colSpan="2">Or custom CSS</td>
+                  <td colSpan="2">Any UI Framework</td>
+                  <td colSpan="2">Good ol' CSS</td>
                 </tr>
                 <tr>
                   <td>Angular</td>
