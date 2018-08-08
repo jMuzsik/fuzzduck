@@ -1,16 +1,17 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Home from './containers/Home';
-import Notes from './containers/Notes';
-import Login from './containers/Login';
-import Signup from './containers/Signup';
-import AboutMe from './components/AboutMe';
-import Settings from './containers/Settings';
-import NewNote from './containers/NewNote';
-import NotFound from './containers/NotFound';
-import AppliedRoute from './components/AppliedRoute';
-import AuthenticatedRoute from './components/AuthenticatedRoute';
-import UnauthenticatedRoute from './components/UnauthenticatedRoute';
+import React from "react"
+import { Route, Switch } from "react-router-dom"
+import Home from "./containers/Home"
+import Notes from "./containers/Notes"
+import Login from "./containers/Login"
+import Signup from "./containers/Signup"
+import AboutMe from "./components/AboutMe"
+import Projects from "./components/Projects"
+import Settings from "./containers/Settings"
+import NewNote from "./containers/NewNote"
+import NotFound from "./containers/NotFound"
+import AppliedRoute from "./components/AppliedRoute"
+import AuthenticatedRoute from "./components/AuthenticatedRoute"
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute"
 
 export default ({ childProps }) => (
   <Switch>
@@ -31,6 +32,12 @@ export default ({ childProps }) => (
       path="/mr-muzsik"
       exact
       component={AboutMe}
+      props={childProps}
+    />
+    <UnauthenticatedRoute
+      path="/projects"
+      exact
+      component={Projects}
       props={childProps}
     />
     <AuthenticatedRoute
@@ -54,4 +61,4 @@ export default ({ childProps }) => (
     {/* Finally, catch all unmatched routes */}
     <Route component={NotFound} />
   </Switch>
-);
+)

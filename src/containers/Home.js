@@ -10,8 +10,7 @@ import {
   ButtonGroup,
   Button,
   Glyphicon,
-  Panel,
-  Alert
+  Panel
 } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
 import "./Home.css"
@@ -99,7 +98,9 @@ export default class Home extends Component {
       <Col className="panel" xs={12} sm={6}>
         <Panel bsStyle="info" id="collapsible-panel-example-2">
           <Panel.Heading>
-            <Panel.Title align="center"toggle>Why is there a login, etc.</Panel.Title>
+            <Panel.Title align="center" toggle>
+              Why is there a login, etc.
+            </Panel.Title>
           </Panel.Heading>
           <Panel.Collapse>
             <Panel.Body>
@@ -121,10 +122,13 @@ export default class Home extends Component {
       <Col className="panel" xs={12} sm={8}>
         <Panel bsStyle="primary" id="collapsible-panel-example-3">
           <Panel.Heading>
-            <Panel.Title align="center" toggle>This here is me</Panel.Title>
+            <Panel.Title align="center" toggle>
+              This here is me
+            </Panel.Title>
           </Panel.Heading>
           <Panel.Collapse>
-            <Panel.Body className="face-panel-body"><pre className="face">{face}</pre>
+            <Panel.Body className="face-panel-body">
+              <pre className="face">{face}</pre>
             </Panel.Body>
           </Panel.Collapse>
         </Panel>
@@ -136,7 +140,9 @@ export default class Home extends Component {
       <Col className="panel" xs={12} sm={8}>
         <Panel bsStyle="success" id="collapsible-panel-example-3">
           <Panel.Heading>
-            <Panel.Title align="center" toggle>Thing's are green round here.</Panel.Title>
+            <Panel.Title align="center" toggle>
+              Thing's are green round here.
+            </Panel.Title>
           </Panel.Heading>
           <Panel.Collapse>
             <Panel.Body className="universe-panel-body">
@@ -562,6 +568,9 @@ export default class Home extends Component {
             <ButtonGroup className="button-group">
               <LinkContainer to="/mr-muzsik">
                 <Button title="goes to page about me">About Me</Button>
+              </LinkContainer>
+              <LinkContainer to="/projects">
+                <Button title="goes to projects page">Projects</Button>
               </LinkContainer>
             </ButtonGroup>
           </Col>

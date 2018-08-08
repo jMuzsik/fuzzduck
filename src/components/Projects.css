@@ -1,0 +1,22 @@
+.project-video,
+.player {
+  max-width: 100%;
+}
+.center-row {
+  display: flex;
+  justify-content: center;
+}
+.col-custom {
+  margin: 2rem 0;
+}
+.btn-default {
+  margin: 1rem;
+  border-radius: 10% !important;
+  padding: 0.5rem;
+}
+
+.flex-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
