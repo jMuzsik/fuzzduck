@@ -1,11 +1,5 @@
 import React, { Component } from "react"
-import {
-  Grid,
-  Row,
-  Col,
-  Button,
-  ButtonGroup
-} from "react-bootstrap"
+import { Grid, Row, Col, Button, ButtonGroup } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
 import "./Projects.css"
 
@@ -24,14 +18,11 @@ export default class AboutMe extends Component {
         <Row className="show-grid">
           <Col className="col-custom" xs={12} md={6} align="center">
             <h3>Find an Issue</h3>
-            <div className="player">
-              <video
-                controls
-                alt="Video showcasing the find an issue project"
-                className="project-video"
-                src="./findanissuevideo.mp4"
-              />
-            </div>
+            <img
+              className="rounded img-thumbnail"
+              src="./findanissue.png"
+              alt="find an issue application"
+            />
             <p>A simpler way to find an issue on github.</p>
             <ButtonGroup className="flex-btns">
               <Button
@@ -43,7 +34,7 @@ export default class AboutMe extends Component {
               </Button>
               <Button
                 title="Links to applications website"
-                href="https://youthful-meninsky-3d9edf.netlify.com"
+                href="https://findanissue.com"
                 bsStyle="default"
               >
                 Site
@@ -52,14 +43,11 @@ export default class AboutMe extends Component {
           </Col>
           <Col className="col-custom" xs={12} md={6} align="center">
             <h3>API Central</h3>
-            <div className="player">
-              <video
-                controls
-                alt="Video showcasing the API Central Application"
-                className="project-video"
-                src="./alltheapis.mp4"
-              />
-            </div>
+            <img
+              className="rounded img-thumbnail"
+              src="./apicentral.png"
+              alt="api central application"
+            />
             <p>
               A codebase showcasing how to use AWS Lambda and displaying the
               data in a unique way.
@@ -85,14 +73,11 @@ export default class AboutMe extends Component {
         <Row className="show-grid">
           <Col className="col-custom" xs={12} md={6} align="center">
             <h3>Synopses</h3>
-            <div className="player">
-              <video
-                controls
-                alt="Video showcasing the application"
-                className="project-video"
-                src="./synopsesvideo.mp4"
-              />
-            </div>
+            <img
+              className="rounded img-thumbnail"
+              src="./synopses.png"
+              alt="synopses application"
+            />
             <p>A way to fetch book data and display it cleanly.</p>
             <ButtonGroup className="flex-btns">
               <Button
@@ -104,7 +89,7 @@ export default class AboutMe extends Component {
               </Button>
               <Button
                 title="Links to applications website"
-                href="https://bookspassed.com"
+                href="http://bookspassed.com"
                 bsStyle="default"
               >
                 Site
@@ -113,14 +98,11 @@ export default class AboutMe extends Component {
           </Col>
           <Col className="col-custom" xs={12} md={6} align="center">
             <h3>Katan</h3>
-            <div className="player">
-              <video
-                controls
-                alt="Video showcasing the application"
-                className="project-video"
-                src="./katan.mp4"
-              />
-            </div>
+            <img
+              className="rounded img-thumbnail"
+              src="./catan.png"
+              alt="catan application"
+            />
             <p>A Settler's of Catan clone.</p>
             <ButtonGroup className="flex-btns">
               <Button
