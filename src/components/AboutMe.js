@@ -122,11 +122,6 @@ export default class AboutMe extends Component {
                   <td colSpan="2">Happy People</td>
                   <td colSpan="2">Funny People</td>
                 </tr>
-                <tr>
-                  <td colSpan="4">
-                    Basically, I can learn anything needed to get the job done
-                  </td>
-                </tr>
               </tbody>
             </Table>
           </Col>
@@ -139,12 +134,6 @@ export default class AboutMe extends Component {
                 title="links to my github account"
               >
                 <i className="icon-github" />
-              </Button>
-              <Button
-                href="https://medium.com/@muzsik33"
-                title="links to my medium account"
-              >
-                <i className="icon-medium" />
               </Button>
               <Button
                 href="https://www.linkedin.com/in/jerry-muzsik/"

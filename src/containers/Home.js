@@ -93,30 +93,6 @@ export default class Home extends Component {
   handleRedirectToAboutMe(e) {
     this.props.history.push("/mr-muzsik")
   }
-  renderPanel() {
-    return (
-      <Col className="panel" xs={12} sm={6}>
-        <Panel bsStyle="info" id="collapsible-panel-example-2">
-          <Panel.Heading>
-            <Panel.Title align="center" toggle>
-              Why is there a login, etc.
-            </Panel.Title>
-          </Panel.Heading>
-          <Panel.Collapse>
-            <Panel.Body>
-              This site is partially a testing ground of serverless
-              technologies. Specifically AWS platforms. Cognito is hooked up for
-              authentication. Stripe is used for billing (though I am not
-              selling anything and it's not finished). DynamoDB is set up with
-              the notes section. Rest of data, separate from the table is stored
-              on S3. Page is hosted on Netlify but some sections are utilising
-              Cloudfront. The DNS lives in Route 53.
-            </Panel.Body>
-          </Panel.Collapse>
-        </Panel>
-      </Col>
-    )
-  }
   renderFace() {
     return (
       <Col className="panel" xs={12} sm={8}>
@@ -578,16 +554,6 @@ export default class Home extends Component {
         <Row className="panel-container">{this.renderFace()}</Row>
         <br />
         <Row className="panel-container">{this.renderForest()}</Row>
-        <br />
-        <Row className="panel-container">{this.renderPanel()}</Row>
-        <ButtonGroup className="button-group">
-          <Button
-            href="https://oldsite.fuzzduck.org"
-            title="Goes to previous version of site"
-          >
-            Previous Version of this site
-          </Button>
-        </ButtonGroup>
       </Grid>
     )
   }
